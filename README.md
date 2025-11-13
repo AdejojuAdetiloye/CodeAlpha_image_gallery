@@ -1,3 +1,2 @@
-Welcome to my full scientific calculator app.
-this app can do both simple and complex mathematical operations.
-clone this repo and , run and see the amazing scientific calculator
+Welcome to my full image gallery app.
+this is a very reactive image gallery with smooth hover effect and animation
