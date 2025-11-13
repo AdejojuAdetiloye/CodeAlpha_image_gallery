@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Advanced Scientific Calculator</title>
+   <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+    <div class="calculator-container">
+        <h1>Scientific Calculator</h1>
+        
+        <div class="mode-toggle">
+            <button class="mode-btn active" onclick="setMode('deg')">DEG</button>
+            <button class="mode-btn" onclick="setMode('rad')">RAD</button>
+        </div>
+
+        <div class="display">
+            <div class="expression" id="expression"></div>
+            <div class="result" id="result">0</div>
+        </div>
+
+        <div class="buttons">
+            <!-- Row 1 -->
+            <button class="function" onclick="addFunction('sin(')">sin</button>
+            <button class="function" onclick="addFunction('cos(')">cos</button>
+            <button class="function" onclick="addFunction('tan(')">tan</button>
+            <button class="function" onclick="addFunction('log(')">log</button>
+            <button class="function" onclick="addFunction('ln(')">ln</button>
+
+            <!-- Row 2 -->
+            <button class="function" onclick="addFunction('asin(')">asin</button>
+            <button class="function" onclick="addFunction('acos(')">acos</button>
+            <button class="function" onclick="addFunction('atan(')">atan</button>
+            <button class="function" onclick="addFunction('sqrt(')">√</button>
+            <button class="function" onclick="addToExpression('^')">x^y</button>
+
+            <!-- Row 3 -->
+            <button class="function" onclick="addFunction('sinh(')">sinh</button>
+            <button class="function" onclick="addFunction('cosh(')">cosh</button>
+            <button class="function" onclick="addFunction('tanh(')">tanh</button>
+            <button class="function" onclick="addToExpression('!')">x!</button>
+            <button class="function" onclick="addConstant('e')">e</button>
+
+            <!-- Row 4 -->
+            <button class="function" onclick="addToExpression('(')">(</button>
+            <button class="function" onclick="addToExpression(')')">)</button>
+            <button class="function" onclick="addConstant('pi')">π</button>
+            <button class="function" onclick="addFunction('abs(')">|x|</button>
+            <button class="clear" onclick="clearAll()">AC</button>
+
+            <!-- Row 5 -->
+            <button onclick="addToExpression('7')">7</button>
+            <button onclick="addToExpression('8')">8</button>
+            <button onclick="addToExpression('9')">9</button>
+            <button class="operator" onclick="addToExpression('/')">÷</button>
+            <button class="clear" onclick="backspace()">⌫</button>
+
+            <!-- Row 6 -->
+            <button onclick="addToExpression('4')">4</button>
+            <button onclick="addToExpression('5')">5</button>
+            <button onclick="addToExpression('6')">6</button>
+            <button class="operator" onclick="addToExpression('*')">×</button>
+            <button class="function" onclick="addFunction('1/')">1/x</button>
+
+            <!-- Row 7 -->
+            <button onclick="addToExpression('1')">1</button>
+            <button onclick="addToExpression('2')">2</button>
+            <button onclick="addToExpression('3')">3</button>
+            <button class="operator" onclick="addToExpression('-')">−</button>
+            <button class="function" onclick="addToExpression('^2')">x²</button>
+
+            <!-- Row 8 -->
+            <button onclick="addToExpression('0')">0</button>
+            <button onclick="addToExpression('.')">.</button>
+            <button class="function" onclick="addFunction('exp(')">exp</button>
+            <button class="operator" onclick="addToExpression('+')">+</button>
+            <button class="equals" onclick="calculate()">=</button>
+        </div>
+    </div>
+    <script src="./script.js"></script>
+</body>
+</html>
